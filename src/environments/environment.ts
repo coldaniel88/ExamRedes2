@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  theMovieDBApi: ''
+  theMovieDBApi: 'k_0iyclfk0'
 };
