@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  theMovieDBApi: ''
+  theMovieDBApi: 'k_0iyclfk0'
 };
