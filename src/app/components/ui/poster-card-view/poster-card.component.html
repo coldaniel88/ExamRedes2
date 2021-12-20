@@ -1,0 +1,19 @@
+<a [routerLink]="isMovie ? '/movies/detail/' + model.id : '/tv-shows/detail/' + model.id">
+  <mat-card class="movie-card">
+
+    <img loading="lazy" [src]="'https://image.tmdb.org/t/p/w220_and_h330_face/' + model?.poster_path"
+         srcset="https://image.tmdb.org/t/p/w220_and_h330_face/{{model?.poster_path}} 1x,
+         https://image.tmdb.org/t/p/w440_and_h660_face/{{model?.poster_path}} 2x"
+         [alt]="model.title ? model.title : model.name" appImgMissingDirective>
+    <mat-card-content class="poster-card-text-container">
+      <mat-card-title *ngIf="model.title" [title]="model.title">{{model.title}}</mat-card-title>
+      <mat-card-title *ngIf="model.name" [title]="model.name">{{model.name}}</mat-card-title>
+      <p *ngIf="model.release_date">
+        {{model.release_date | date}}
+      </p>
+      <p *ngIf="model.first_air_date">
+        {{model.first_air_date | date}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</a>
